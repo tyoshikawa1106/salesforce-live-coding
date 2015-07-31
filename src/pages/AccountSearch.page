@@ -1,0 +1,30 @@
+<apex:page controller="AccountSearchController" showHeader="true" sidebar="true" id="page">
+    <apex:form id="form">
+        <apex:pageBlock id="block">
+            <apex:pageMessages id="msg" />
+            <apex:pageBlockButtons location="bottom">
+                <apex:commandButton value=" {!$Label.Search} " title=" {!$Label.Search} " action="{!doSearch}" reRender="form" />
+            </apex:pageBlockButtons>
+            <apex:pageBlockSection columns="2" id="section">
+                <apex:inputField value="{!account.Name}" required="false" />
+                <apex:inputField value="{!account.AccountNumber}" required="false" />
+            </apex:pageBlockSection>
+        </apex:pageBlock>
+        <apex:pageBlock id="resultBlock">
+            <apex:pageBlockTable value="{!accounts}" var="item">
+                <apex:column headerValue="{!$ObjectType.Account.Fields.Name.Label}">
+                    <apex:outputField value="{!item.Name}" />
+                </apex:column>
+                <apex:column headerValue="{!$ObjectType.Account.Fields.AccountNumber.Label}">
+                    <apex:outputField value="{!item.AccountNumber}" />
+                </apex:column>
+                <apex:column headerValue="{!$ObjectType.Account.Fields.Phone.Label}">
+                    <apex:outputField value="{!item.Phone}" />
+                </apex:column>
+                <apex:column headerValue="{!$ObjectType.Account.Fields.Fax.Label}">
+                    <apex:outputField value="{!item.Fax}" />
+                </apex:column>
+            </apex:pageBlockTable>
+        </apex:pageBlock>
+    </apex:form>
+</apex:page>

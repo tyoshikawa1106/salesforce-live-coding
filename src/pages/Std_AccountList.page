@@ -1,0 +1,22 @@
+<apex:page standardController="Account" showHeader="true" sidebar="true" recordSetVar="accounts" id="page">
+    <apex:form id="form">
+        <apex:pageBlock title="{!$ObjectType.Account.Label}" id="block">
+            <apex:pageBlockTable value="{!accounts}" var="item">
+                <apex:column headerValue="{!$ObjectType.Account.Fields.Name.Label}">
+                    <apex:outputLink value="{!$Page.Std_AccountView}?id={!item.Id}&retURL={!$Page.Std_AccountList}">
+                        <apex:outputField value="{!item.Name}" />
+                    </apex:outputLink>
+                </apex:column>
+                <apex:column headerValue="{!$ObjectType.Account.Fields.AccountNumber.Label}">
+                    <apex:outputField value="{!item.AccountNumber}" />
+                </apex:column>
+                <apex:column headerValue="{!$ObjectType.Account.Fields.Phone.Label}">
+                    <apex:outputField value="{!item.Phone}" />
+                </apex:column>
+                <apex:column headerValue="{!$ObjectType.Account.Fields.Fax.Label}">
+                    <apex:outputField value="{!item.Fax}" />
+                </apex:column>
+            </apex:pageBlockTable>
+        </apex:pageBlock>
+    </apex:form>
+</apex:page>

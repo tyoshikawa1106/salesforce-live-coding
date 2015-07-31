@@ -1,0 +1,16 @@
+<apex:page standardController="Account" showHeader="true" sidebar="true" id="page">
+    <apex:form id="form">
+        <apex:pageBlock id="block">
+            <apex:pageBlockButtons id="buttons">
+                <apex:commandButton value=" {!$Label.Edit} " title=" {!$Label.Edit} " action="{!Edit}" id="editBtn" />
+                <apex:commandButton value=" {!$Label.Cancel} " title=" {!$Label.Cancel} " action="{!Cancel}" id="cancelBtn" />
+            </apex:pageBlockButtons>
+            <apex:pageBlockSection columns="2">
+                <apex:outputField value="{!Account.Name}" />
+                <apex:outputField value="{!Account.AccountNumber}" />
+                <apex:outputField value="{!Account.Phone}" />
+                <apex:outputField value="{!Account.Fax}" />
+            </apex:pageBlockSection>
+        </apex:pageBlock>
+    </apex:form>
+</apex:page>
