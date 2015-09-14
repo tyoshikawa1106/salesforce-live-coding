@@ -10,6 +10,6 @@
 <a href="https://www.youtube.com/watch?v=Vs7rtPSJr_E">>> YouTube Link</a>
 
 ### SFDC LIVE #3 - Hello Apex Batch
-<imag src="http://f.st-hatena.com/images/fotolife/t/tyoshikawa1106/20150914/20150914163952.png" width="600" />
+<img src="http://f.st-hatena.com/images/fotolife/t/tyoshikawa1106/20150914/20150914163952.png" width="600" />
 
 <a href="https://www.youtube.com/watch?v=onQXlPhguHc">>> YouTube Link</a>
