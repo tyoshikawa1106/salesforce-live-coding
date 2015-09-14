@@ -74,4 +74,26 @@ private class CommonTesterTest {
             Test.stopTest();
         }
     }
+
+    /**
+     * 商談
+     */
+    static testMethod void createOpportunityTest() {
+        
+        System.runAs(testAdminUser) {
+            Account account = CommonTester.createAccount(true);
+            
+            Test.startTest();
+            
+            // Insertなし
+            Opportunity opportunity = CommonTester.createOpportunity(account, false);
+            System.assertEquals(String.isEmpty(opportunity.Id), true);
+            
+            // Insertあり
+            opportunity = CommonTester.createOpportunity(account, true);
+            System.assertEquals(String.isNotEmpty(opportunity.Id), true);
+            
+            Test.stopTest();
+        }
+    }
 }

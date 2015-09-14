@@ -47,4 +47,23 @@ public with sharing class CommonTester {
         
         return contact;
     }
+
+    /**
+     * 商談
+     */
+    public static Opportunity createOpportunity(Account account, Boolean isInsert) {
+        
+        Opportunity opportunity = new Opportunity(
+             AccountId = account.Id
+            ,Name = 'Name'
+            ,CloseDate = date.newInstance(2011, 10, 5)
+            ,StageName = '提案'
+        );
+        
+        if (isInsert) {
+            insert opportunity;
+        }
+        
+        return opportunity;
+    }
 }
