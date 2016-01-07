@@ -1,7 +1,7 @@
 @isTest
 private class OpportunityCopyBatchScheduleTest {
 
-	private static User testAdminUser = CommonTester.getLoginUser();
+    private static User testAdminUser = CommonTester.getLoginUser();
 
     /**
      * スケジュールバッチ
@@ -14,7 +14,7 @@ private class OpportunityCopyBatchScheduleTest {
             
             OpportunityCopyBatchSchedule cls = new OpportunityCopyBatchSchedule();
             // パラメータ
-            String sch = '20 30 8 10 2 ?';
+            String sch = '0 0 0 1 1 ?';
             // バッチスケジュール起動
             System.schedule('OpportunityCopyBatchScheduleTestJob',sch, cls);  
             
