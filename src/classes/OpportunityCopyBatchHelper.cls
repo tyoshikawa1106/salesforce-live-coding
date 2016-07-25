@@ -3,9 +3,9 @@ public with sharing class OpportunityCopyBatchHelper {
     /**
      * コンストラクタ
      */
-	public OpportunityCopyBatchHelper() {
-		
-	}
+    public OpportunityCopyBatchHelper() {
+    
+    }
 
     /**
      * 登録用の商談コピーリスト取得
