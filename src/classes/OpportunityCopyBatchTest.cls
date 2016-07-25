@@ -1,7 +1,7 @@
 @isTest
 private class OpportunityCopyBatchTest {
 
-	private static User testAdminUser = CommonTester.getLoginUser();
+    private static User testAdminUser = CommonTester.getLoginUser();
 
     /**
      * Execute
